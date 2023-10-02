@@ -12,6 +12,7 @@ namespace avto
         private int bak_max;
         private float bak = 0;
         private float rashod;
+        private int km;
         public void Info()
         {
             Console.WriteLine("Введите номер:");
@@ -33,9 +34,10 @@ namespace avto
             bak += float.Parse(Console.ReadLine());
             Console.WriteLine($"\nВаш текущий уровень топлива: {bak}");
         }
-        public void move()
+        public void Move()
         {
-
+            Console.WriteLine("На какое расстояние хотите проехать?");
+            km = Convert.ToInt32(Console.ReadLine());
         }
     }
 }

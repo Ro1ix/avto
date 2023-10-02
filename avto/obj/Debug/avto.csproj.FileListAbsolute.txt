@@ -5,3 +5,10 @@ C:\Users\prdb\Desktop\avto\obj\Debug\avto.csproj.AssemblyReference.cache
 C:\Users\prdb\Desktop\avto\obj\Debug\avto.csproj.CoreCompileInputs.cache
 C:\Users\prdb\Desktop\avto\obj\Debug\avto.exe
 C:\Users\prdb\Desktop\avto\obj\Debug\avto.pdb
+E:\Ваня\Колледж\3 курс\1 семестр\Программирование\avto\bin\Debug\avto.exe.config
+E:\Ваня\Колледж\3 курс\1 семестр\Программирование\avto\bin\Debug\avto.exe
+E:\Ваня\Колледж\3 курс\1 семестр\Программирование\avto\bin\Debug\avto.pdb
+E:\Ваня\Колледж\3 курс\1 семестр\Программирование\avto\obj\Debug\avto.csproj.AssemblyReference.cache
+E:\Ваня\Колледж\3 курс\1 семестр\Программирование\avto\obj\Debug\avto.csproj.CoreCompileInputs.cache
+E:\Ваня\Колледж\3 курс\1 семестр\Программирование\avto\obj\Debug\avto.exe
+E:\Ваня\Колледж\3 курс\1 семестр\Программирование\avto\obj\Debug\avto.pdb

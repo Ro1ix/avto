@@ -1,0 +1,7 @@
+C:\Users\prdb\Desktop\avto\bin\Debug\avto.exe.config
+C:\Users\prdb\Desktop\avto\bin\Debug\avto.exe
+C:\Users\prdb\Desktop\avto\bin\Debug\avto.pdb
+C:\Users\prdb\Desktop\avto\obj\Debug\avto.csproj.AssemblyReference.cache
+C:\Users\prdb\Desktop\avto\obj\Debug\avto.csproj.CoreCompileInputs.cache
+C:\Users\prdb\Desktop\avto\obj\Debug\avto.exe
+C:\Users\prdb\Desktop\avto\obj\Debug\avto.pdb

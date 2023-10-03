@@ -12,10 +12,7 @@ namespace avto
         static void Main(string[] args)
         {
             Avto car = new Avto();
-            car.Info();
-            Console.WriteLine();
-            car.Output();
-            car.Zapravka();
+            car.Move();
         }
     }
 }

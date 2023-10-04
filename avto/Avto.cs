@@ -14,6 +14,8 @@ namespace avto
         private float km_max;
         private float km = 0;
         private int otvet;
+        private float speed;
+        //private float probeg;
         private Random random = new Random();
         public void Info()
         {
@@ -35,22 +37,34 @@ namespace avto
             bak = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine($"\nВаш текущий уровень топлива: {bak}\n");
         }
+        public void SpeedUp()
+        {
+
+        }
+        public void SpeedDown()
+        {
+
+        }
         public void Move()
         {
             do
             {
-
-                Info();
-                Output();
+                Console.WriteLine("\nС какой скоростью хотите ехать?\nПримечание: скорость ниже или равная 60 км/ч будет расходовать топливо в 1,5 раза меньше.\nСкорость выше 90 км/ч - в 1,5 раза больше");
+                speed = float.Parse(Console.ReadLine());
                 km_max = random.Next(100, 10001);
                 Console.WriteLine($"\nВы собираетесь проехать такое расстояние:\n{km_max} км\n\nПоехали!\n");
                 km = 0;
                 do
                 {
-                    km += rashod / 100 * bak;
+                    if (speed > 90)
+                        km += (float)(rashod * 1.5 / 100 * bak);
+                    else if (speed <= 55)
+                        km += (float)(rashod / 1.5 / 100 * bak);
+                    else
+                        km += rashod / 100 * bak;
                     if (km < km_max)
                     {
-                        Console.WriteLine($"Вы проехали только {km} км. Осталось {km_max - km}\nВам не хватает бензина.Желаете заправиться?\n(Нажмите 1, чтобы заправиться)");
+                        Console.WriteLine($"Вы проехали только {km} км. Осталось {km_max - km}\nВам не хватает бензина. Желаете заправиться?\n(Нажмите 1, чтобы заправиться)");
                         otvet = Convert.ToInt32(Console.ReadLine());
                         if (otvet == 1)
                         {

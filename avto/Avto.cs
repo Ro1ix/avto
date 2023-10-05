@@ -10,6 +10,7 @@ namespace avto
     {
         private string id;
         private float bak;
+        private int bak_max;
         private float rashod;
         private float km_max;
         private float km = 0;
@@ -21,21 +22,29 @@ namespace avto
         {
             Console.WriteLine("Введите номер автомобиля:");
             id = Console.ReadLine();
-            bak = random.Next(250, 1001);
+            Console.WriteLine("Введите объём бака:");
+            bak_max = Convert.ToInt32(Console.ReadLine());
+            bak = random.Next(0, bak_max + 1);
             Console.WriteLine("\nВведите расход топлива на 100 км:");
             rashod = float.Parse(Console.ReadLine());
         }
         public void Output()
         {
             Console.WriteLine($"\nНомер авто: {id}");
-            Console.WriteLine($"Кол-во бензина в баке: {bak}");
+            Console.WriteLine($"Кол-во бензина в баке: {bak} / {bak_max}");
             Console.WriteLine($"Расход топлива на 100 км: {rashod}");
         }
-        public void Zapravka()
+        private void Zapravka()
         {
             Console.WriteLine("\nСколько хотите заправить бензина?");
             bak = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"\nВаш текущий уровень топлива: {bak}\n");
+            if ( bak > bak_max )
+            {
+                Console.WriteLine("ОШИБКА! Объём вливаемого бензина больше объёма бака");
+                Zapravka();
+            }
+            else
+                Console.WriteLine($"\nВаш текущий уровень топлива: {bak} / {bak_max}\n");
         }
         public void SpeedUp()
         {
@@ -51,7 +60,7 @@ namespace avto
             {
                 Console.WriteLine("\nС какой скоростью хотите ехать?\nПримечание: скорость ниже или равная 60 км/ч будет расходовать топливо в 1,5 раза меньше.\nСкорость выше 90 км/ч - в 1,5 раза больше");
                 speed = float.Parse(Console.ReadLine());
-                km_max = random.Next(100, 10001);
+                km_max = random.Next(100, 5001);
                 Console.WriteLine($"\nВы собираетесь проехать такое расстояние:\n{km_max} км\n\nПоехали!\n");
                 km = 0;
                 do
